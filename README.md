@@ -1,4 +1,5 @@
 # Blum Game Clicker Extension
+![image](https://github.com/user-attachments/assets/c62ecf51-deb2-4cf1-a6e7-28f562c91250)
 
 ### Subscribe to my [Telegram channel](https://t.me/marcelkow_crypto) to get access to more software tools and updates.
 
