@@ -25,3 +25,8 @@ This extension automates the Blum game by automatically playing the game on your
 2. Open AdsPower. [You can use this link to download the best antidetect browser](https://share.adspower.net/marcel) and use coupon code **Marcel** for a **45% discount**.
 3. Navigate to the **Extensions** section of AdsPower.
 4. Click **Upload extension** and upload the ZIP archive to install the extension.
+
+
+### Subscribe to my [Telegram channel](https://t.me/marcelkow_crypto) to get access to more software tools and updates.
+### Subscribe to my [Telegram channel](https://t.me/marcelkow_crypto) to get access to more software tools and updates.
+### Subscribe to my [Telegram channel](https://t.me/marcelkow_crypto) to get access to more software tools and updates.
