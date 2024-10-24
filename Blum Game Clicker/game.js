@@ -1,7 +1,8 @@
 window.SETTINGS = window.GAME_SETTINGS || {
-    bombProbability: 0.02,  
+    bombProbability: 0.01,  
     flowerProbability: 0.72,  
-    iceProbability: 0.80,  
+    iceProbability: 0.80,
+    dogsProbability: 0.99,  
     gameEnded: false,
     isScriptEnabled: true
 };
@@ -17,10 +18,10 @@ if (window.SETTINGS.isScriptEnabled) {
         };
 
         function processGameItem(item) {
-            if (!item || !item.item) return;
+            if (!item || !item.asset) return;
 
-            const { type } = item.item;
-            switch (type) {
+            const { assetType } = item.asset;
+            switch (assetType) {
                 case "CLOVER":
                     handleFlower(item);
                     break;
@@ -29,6 +30,9 @@ if (window.SETTINGS.isScriptEnabled) {
                     break;
                 case "FREEZE":
                     handleFreeze(item);
+                    break;
+                case "DOGS":
+                    handleDogs(item);
                     break;
             }
         }
@@ -51,9 +55,19 @@ if (window.SETTINGS.isScriptEnabled) {
             }
         }
 
+        function handleDogs(item) {
+            if (Math.random() < window.SETTINGS.dogsProbability) {
+                triggerClick(item);
+            }
+        }
+
         function triggerClick(item) {
             setTimeout(() => {
-                item.onClick(item);
+                if (typeof item.onClick === 'function') {
+                    item.onClick(item);
+                } else {
+                    console.log("item.onClick не определен.");
+                }
                 item.isExplosion = true;
                 item.addedAt = performance.now();
             }, calculateDelay());
@@ -115,7 +129,7 @@ if (window.SETTINGS.isScriptEnabled) {
         };
 
     } catch (error) {
-        console.error("Error in Blum AutoPlayer:", error);
+        console.error("Ошибка в Blum AutoPlayer:", error);
     }
 } else {
     console.log("Скрипт отключен через настройки.");
