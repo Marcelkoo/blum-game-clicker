@@ -2,7 +2,8 @@ window.SETTINGS = window.GAME_SETTINGS || {
     bombProbability: 0.01,  
     flowerProbability: 0.72,  
     iceProbability: 0.80,
-    dogsProbability: 0.99,  
+    trumpProbability: 0.99,
+    harrisProbability: 0.99,
     gameEnded: false,
     isScriptEnabled: true
 };
@@ -31,8 +32,11 @@ if (window.SETTINGS.isScriptEnabled) {
                 case "FREEZE":
                     handleFreeze(item);
                     break;
-                case "DOGS":
-                    handleDogs(item);
+                case "TRUMP":
+                    handleTrump(item);
+                    break;
+                case "HARRIS":
+                    handleHarris(item);
                     break;
             }
         }
@@ -55,8 +59,14 @@ if (window.SETTINGS.isScriptEnabled) {
             }
         }
 
-        function handleDogs(item) {
-            if (Math.random() < window.SETTINGS.dogsProbability) {
+        function handleTrump(item) {
+            if (Math.random() < window.SETTINGS.trumpProbability) {
+                triggerClick(item);
+            }
+        }
+
+        function handleHarris(item) {
+            if (Math.random() < window.SETTINGS.harrisProbability) {
                 triggerClick(item);
             }
         }
