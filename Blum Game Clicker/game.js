@@ -104,7 +104,7 @@ if (window.SETTINGS.isScriptEnabled) {
         function autoStartGame() {
             const buttons = document.querySelectorAll('button.kit-button.is-large.is-primary, a.play-btn[href="/game"], button.kit-button.is-large.is-primary');
             buttons.forEach(btn => {
-                if (/Play/.test(btn.textContent) || /Continue/.test(btn.textContent)) {
+                if (/Play/.test(btn.textContent) || /Continue/.test(btn.textContent) || /Играть/.test(btn.textContent)) {
                     setTimeout(() => {
                         btn.click();
                         window.SETTINGS.gameEnded = false;
