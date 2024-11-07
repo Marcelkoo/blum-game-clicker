@@ -11,7 +11,7 @@ function injectScriptWithSettings(file, settings, node) {
     th.appendChild(script);
 }
 
-chrome.storage.sync.get(['flowerProbability', 'bombProbability', 'iceProbability', 'trumpProbability', 'harrisProbability', 'isScriptEnabled'], function(settings) {
+chrome.storage.sync.get(['flowerProbability', 'bombProbability', 'iceProbability', 'isScriptEnabled'], function(settings) {
     const loadedSettings = {
         bombProbability: (settings.bombProbability || 1) / 100,
         flowerProbability: (settings.flowerProbability || 72) / 100,
