@@ -16,8 +16,6 @@ chrome.storage.sync.get(['flowerProbability', 'bombProbability', 'iceProbability
         bombProbability: (settings.bombProbability || 1) / 100,
         flowerProbability: (settings.flowerProbability || 72) / 100,
         iceProbability: (settings.iceProbability || 80) / 100,
-        trumpProbability: (settings.trumpProbability || 99) / 100,
-        harrisProbability: (settings.harrisProbability || 99) / 100,
         isScriptEnabled: settings.isScriptEnabled !== false
     };
 
@@ -31,8 +29,6 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
         bombProbability: message.bombProbability / 100,
         flowerProbability: message.flowerProbability / 100,
         iceProbability: message.iceProbability / 100,
-        trumpProbability: message.trumpProbability / 100,
-        harrisProbability: message.harrisProbability / 100,
         isScriptEnabled: message.isScriptEnabled
     };
 
