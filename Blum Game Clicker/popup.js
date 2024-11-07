@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const applyButton = document.getElementById('apply-button');
     const enableScriptCheckbox = document.getElementById('enable-script');
   
-    chrome.storage.sync.get(['flowerProbability', 'bombProbability', 'iceProbability', 'trumpProbability', 'harrisProbability', 'isScriptEnabled'], function(settings) {
+    chrome.storage.sync.get(['flowerProbability', 'bombProbability', 'iceProbability', 'isScriptEnabled'], function(settings) {
       flowerInput.value = settings.flowerProbability || 72;
       bombInput.value = settings.bombProbability || 1;
       iceInput.value = settings.iceProbability || 80;
