@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
     chrome.storage.sync.get(['flowerProbability', 'bombProbability', 'iceProbability', 'isScriptEnabled'], function(settings) {
       flowerInput.value = settings.flowerProbability || 72;
-      bombInput.value = settings.bombProbability || 1;
+      bombInput.value = settings.bombProbability || 95;
       iceInput.value = settings.iceProbability || 80;
       enableScriptCheckbox.checked = settings.isScriptEnabled !== false;
     });
