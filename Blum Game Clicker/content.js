@@ -13,7 +13,7 @@ function injectScriptWithSettings(file, settings, node) {
 
 chrome.storage.sync.get(['flowerProbability', 'bombProbability', 'iceProbability', 'isScriptEnabled'], function(settings) {
     const loadedSettings = {
-        bombProbability: (settings.bombProbability || 1) / 100,
+        bombProbability: (settings.bombProbability || 95) / 100,
         flowerProbability: (settings.flowerProbability || 72) / 100,
         iceProbability: (settings.iceProbability || 80) / 100,
         isScriptEnabled: settings.isScriptEnabled !== false
