@@ -1,5 +1,5 @@
 window.SETTINGS = window.GAME_SETTINGS || {
-    bombProbability: 0.01,  
+    bombProbability: 0.95,  
     flowerProbability: 0.72,  
     iceProbability: 0.80,
     gameEnded: false,
